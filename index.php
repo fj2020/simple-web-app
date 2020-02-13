@@ -87,10 +87,10 @@ else
 				<p>This information has been retrieved from <a href="http://ip-api.com/json">ip-api.com</a>.</p>
 				<p>You are connected to instance <b><?php echo $instance_id; ?></b> in <b><?php echo $zone; ?></b>.	</p>
 				<p>Other instance info get from metadata as below</p>
-				<p>local-ipv4<b><?php echo $local_ipv4; ?></b>
-				<p>public-ipv4<b><?php echo $public_ipv4; ?></b>
-				<p>local-hostname<b><?php echo $local_hostname ?></b>
-				<p>public-hostname<b><?php echo $public_hostname; ?></b>
+				<p>local-ipv4 <b><?php echo $local_ipv4; ?></b>
+				<p>public-ipv4 <b><?php echo $public_ipv4; ?></b>
+				<p>local-hostname <b><?php echo $local_hostname ?></b>
+				<p>public-hostname <b><?php echo $public_hostname; ?></b>
 
 		
 			</center>
