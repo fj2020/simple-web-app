@@ -59,7 +59,18 @@ else
 # Get the instance's availability zone from metadata and store it in the $zone variable
   $url = "http://169.254.169.254/latest/meta-data/placement/availability-zone";
   $zone = file_get_contents($url);
-  
+# Get the instance's local-ipv4 from metadata and store it in the $local_ipv4 variable
+  $url = "http://169.254.169.254/latest/meta-data/local-ipv4";
+  $local_ipv4 = file_get_contents($url);
+# Get the instance's public-ipv4 from metadata and store it in the $public_ipv4 variable
+  $url = "http://169.254.169.254/latest/meta-data/public-ipv4";
+  $public_ipv4 = file_get_contents($url);
+# Get the instance's local-hostname from metadata and store it in the $local_hostname variable
+  $url = "http://169.254.169.254/latest/meta-data/local-hostname";
+  $local_hostname = file_get_contents($url);
+# Get the instance's public-hostname from metadata and store it in the $public_hostname variable
+  $url = "http://169.254.169.254/latest/meta-data/public-hostname";
+  $public_hostname = file_get_contents($url);
   # Print the data
 
 ?>
@@ -75,6 +86,12 @@ else
 				<h1>Lattitude / Longitude</h1><h2><?php echo $response->lat; ?> / <?php echo $response->lon; ?></h2>
 				<p>This information has been retrieved from <a href="http://ip-api.com/json">ip-api.com</a>.</p>
 				<p>You are connected to instance <b><?php echo $instance_id; ?></b> in <b><?php echo $zone; ?></b>.	</p>
+				<p>Other instance info get from metadata as below</p>
+				<p>local-ipv4<b><?php echo $local_ipv4; ?></b>
+				<p>public-ipv4<b><?php echo $public_ipv4; ?></b>
+				<p>local-hostname<b><?php echo $local_hostname ?></b>
+				<p>public-hostname<b><?php echo $public_hostname; ?></b>
+
 		
 			</center>
 			</div>
